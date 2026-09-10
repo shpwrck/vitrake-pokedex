@@ -1,0 +1,5 @@
+web/dist/
+web/validation.json
+qa/
+__pycache__/
+*.pyc

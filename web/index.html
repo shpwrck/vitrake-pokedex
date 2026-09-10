@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c52d3d">
+  <meta name="description" content="Meet Vitrake, the Blast Horn Pokémon. A personal field archive and original Bug/Dragon gift for Jeremy.">
+  <title>Vitrake · Personal Pokédex</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="controls.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#record">Skip to species record</a>
+<main class="desk">
+  <div class="topline"><span>FIELD ARCHIVE</span><span>A Pokémon for Jeremy</span></div>
+  <div class="pokedex">
+    <header class="device-header">
+      <div class="device-brand"><div class="lens" aria-hidden="true"></div><div><span class="brand-name">POKÉDEX</span><span class="brand-sub">PERSONAL FIELD ARCHIVE</span></div></div>
+      <div class="status-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="device-serial">JWS · 001</span>
+    </header>
+    <div class="device-body">
+      <section class="viewer-panel" aria-label="Vitrake specimen viewer">
+        <div class="viewer-top"><span class="embossed">SPECIMEN VIEW</span><div class="segmented" role="group" aria-label="Display mode"><button id="mode-sprite" aria-pressed="true">Sprite</button><button id="mode-artwork" aria-pressed="false">Artwork</button></div></div>
+        <div class="screen" id="specimen-screen">
+          <div class="screen-meta"><span>NO. 001</span><span id="view-status">LOADING</span></div>
+          <div class="sprite-stage" id="sprite-stage"><div class="reticle" aria-hidden="true"></div><canvas id="sprite" width="64" height="64" role="img" aria-label="Vitrake front sprite"></canvas><p id="sprite-message" class="screen-message" role="status">Loading specimen…</p></div>
+          <div class="artwork-stage" id="artwork-stage" hidden><img id="artwork" src="../assets/habitat-artwork.png" alt="Vitrake in its natural habitat, its red dragon shell sheltering a small beetle and its paired transparent horns holding different colored fluids."><p id="artwork-message" class="screen-message" hidden>Artwork could not load.</p></div>
+          <div class="screen-caption"><span id="form-caption">REGULAR FORM · FRONT</span><span id="resolution-caption">64 × 64</span></div>
+        </div>
+        <div class="viewer-controls" id="sprite-controls">
+          <div class="control-row"><div class="segmented" role="group" aria-label="Viewing direction"><button id="view-front" aria-pressed="true">Front</button><button id="view-back" aria-pressed="false">Back</button></div><button id="shiny" class="plastic-button shiny-button" aria-pressed="false"><span aria-hidden="true">✧</span> Shiny</button></div>
+          <div class="playback"><button id="play" class="round-button" aria-label="Play animation" disabled><span aria-hidden="true">▶</span></button><label for="frame" class="sr-only">Animation frame</label><input id="frame" type="range" min="0" max="39" value="0" step="1" disabled><output for="frame" id="frame-number">01/40</output><button id="reset" class="dark-button reset-button" aria-label="Reset animation to first frame" disabled>↺</button></div>
+          <div class="animation-row" id="animation-row" hidden><label for="animation">ANIMATION</label><select id="animation"><option value="idle">Idle</option><option value="attack">Blast</option></select><span id="animation-note">40 frames · 2 seconds</span></div>
+        </div>
+        <div class="art-caption" id="art-caption" hidden><p>Two horn chambers. One dragon-faced blast.</p><a href="../assets/habitat-artwork.png" download>Save field artwork <span aria-hidden="true">↗</span></a></div>
+        <div class="sound-console"><div class="speaker-grille" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="sound-controls"><span class="embossed">VOICE RECORDER</span><button id="cry-button" class="dark-button"><span aria-hidden="true" id="cry-icon">♪</span><span id="cry-label">Hear Vitrake</span><i aria-hidden="true"></i></button></div></div>
+        <audio id="cry" src="../assets/cry.wav" preload="none"></audio>
+        <p id="cry-caption" class="cry-caption" aria-live="polite">Two glassy chirps, a rattling hiss, then a short descending buzz.</p>
+        <div class="viewer-bottom"><span id="habitat-label">FIELD SPECIMEN</span><i aria-hidden="true"></i></div>
+      </section>
+      <div class="hinge" aria-hidden="true"></div>
+      <section class="record-panel" id="record" aria-label="Vitrake field record" tabindex="-1">
+        <div class="record-tabs" role="tablist" aria-label="Pokédex sections">
+          <button id="tab-entry" role="tab" aria-selected="true" aria-controls="panel-entry" tabindex="0"><span aria-hidden="true">▤</span> Entry</button>
+          <button id="tab-battle" role="tab" aria-selected="false" aria-controls="panel-battle" tabindex="-1"><span aria-hidden="true">⚔</span> Battle</button>
+          <button id="tab-moves" role="tab" aria-selected="false" aria-controls="panel-moves" tabindex="-1"><span aria-hidden="true">ϟ</span> Moves</button>
+          <button id="tab-gift" role="tab" aria-selected="false" aria-controls="panel-gift" tabindex="-1"><span aria-hidden="true">◇</span> Gift kit</button>
+        </div>
+        <div class="record-screen">
+          <section id="panel-entry" role="tabpanel" aria-labelledby="tab-entry" tabindex="0" class="tab-panel">
+            <div class="record-label">SPECIES RECORD <span>001</span></div>
+            <div class="species-heading"><h1>Vitrake <span>VIT·RAKE</span></h1><p>Blast Horn Pokémon</p></div>
+            <div class="type-row"><span class="type-badge type-bug">Bug</span><span class="type-badge type-dragon">Dragon</span><span class="single-stage">Single stage</span></div>
+            <div class="measurements"><div><span>HEIGHT</span><strong id="height">—</strong></div><div><span>WEIGHT</span><strong id="weight">—</strong></div><div><span>HABITAT</span><strong class="habitat" id="habitat">—</strong></div></div>
+            <div class="dex-entry"><div class="entry-topline"><span>FIELD OBSERVATION</span><div id="entry-pages" class="entry-pages" role="group" aria-label="Pokédex entry"></div></div><p id="dex-entry">Opening the field record…</p></div>
+            <section class="field-note"><span class="small-label">BEHIND THE BLAST</span><h2 id="lore-title">A dragon in beetle armor.</h2><p id="lore-body"></p></section>
+            <div id="entry-details" class="entry-details"></div>
+            <p class="record-footnote">Original fan-made species · Personal archive number 001</p>
+          </section>
+          <section id="panel-battle" role="tabpanel" aria-labelledby="tab-battle" tabindex="0" class="tab-panel" hidden>
+            <div class="record-label">BATTLE RECORD <span>02</span></div><div class="panel-title"><h2>Built for the blast.</h2><p id="battle-role"></p></div>
+            <div class="section-heading"><h3>Base stats</h3><span id="bst" class="bst">TOTAL —</span></div><div id="stats"></div>
+            <section class="section-divider"><h3>Abilities</h3><div id="abilities"></div></section>
+            <section class="section-divider"><div class="section-heading"><h3>Defensive matchups</h3><span class="muted-copy">Bug / Dragon</span></div><p class="small-copy">Damage received from each attacking type.</p><div id="matchups" class="matchup-grid"></div></section>
+            <section class="section-divider" id="battle-set-section"><h3>Trainer’s notebook</h3><div id="battle-set" class="build-note"></div></section>
+            <p id="mechanics-note" class="record-footnote"></p>
+          </section>
+          <section id="panel-moves" role="tabpanel" aria-labelledby="tab-moves" tabindex="0" class="tab-panel" hidden>
+            <div class="record-label">MOVE ARCHIVE <span>03</span></div><div class="panel-title"><h2>Move list</h2><p>Search the learnset, then open a move for its effect.</p></div>
+            <label class="search-label" for="move-search">Find a move</label><input id="move-search" type="search" placeholder="Name or effect…" autocomplete="off">
+            <div class="move-filters"><label>Type<select id="move-type"><option value="all">All types</option></select></label><label>Method<select id="move-method"><option value="all">All methods</option></select></label><label>Sort<select id="move-sort"><option value="learn">Learn order</option><option value="name">Name A–Z</option><option value="power">Power ↓</option><option value="type">Type A–Z</option></select></label></div>
+            <div class="move-toolbar"><output id="move-count" aria-live="polite">Loading moves…</output><button id="clear-filters" class="lcd-button">Reset</button></div>
+            <div id="moves-list" class="moves-list"></div><p id="moves-note" class="record-footnote"></p>
+          </section>
+          <section id="panel-gift" role="tabpanel" aria-labelledby="tab-gift" tabindex="0" class="tab-panel" hidden>
+            <div class="record-label">PERSONAL COLLECTION <span>04</span></div><div class="panel-title"><h2>One of a kind.</h2><p>For Jeremy, with a little wonder.</p></div>
+            <div class="card-display"><div id="card-object" class="card-object"><div class="card-face card-front"><img id="card-front" src="../assets/card-front.png" alt="Vitrake ex original full-art fan card. Card text is also available below."><div class="card-foil" aria-hidden="true"></div><div class="card-gloss" aria-hidden="true"></div></div><div class="card-face card-back"><img src="../assets/pokemon-card-back.jpg" alt="Standard Pokémon trading card back"></div></div><p id="card-error" class="screen-message" hidden>Card artwork could not load.</p></div>
+            <div class="card-turn-control"><label for="card-angle">ROTATE CARD</label><input id="card-angle" type="range" min="0" max="360" step="1" value="0"><output for="card-angle" id="card-angle-value">0°</output></div>
+            <p class="small-copy">Drag the slider to turn the card and catch the foil.</p>
+            <details class="card-transcript"><summary>Read card text</summary><div id="card-text"></div></details>
+            <p class="card-energy-note">Dragon is the card’s type. Its attacks use the Energy symbols printed in their costs; there is no basic Dragon Energy.</p>
+            <section class="section-divider"><h3>Take the kit with you</h3><div id="downloads" class="downloads"><p class="small-copy">Checking the gift files…</p></div></section>
+            <details class="source-details"><summary>References &amp; creation notes</summary><p class="small-copy">Inspired by the bombardier beetle’s chemical defense. The dragon shell and visible horn reservoirs are fictional adaptations.</p><ul id="source-list"></ul><a href="../README.md">Read the full kit guide ↗</a></details>
+            <p class="record-footnote">A personal fan creation, not an official Pokémon product or a tournament-legal card. Pokémon and the card back belong to their respective owners.</p>
+          </section>
+        </div>
+      </section>
+    </div>
+    <footer class="device-footer"><span><i aria-hidden="true"></i> <span id="record-status">OPENING RECORD</span></span><span>BUG × DRAGON</span></footer>
+  </div>
+  <footer class="page-footer"><span>For Jeremy, with a little wonder.</span><span>Original fan-made Pokémon</span></footer>
+  <p class="load-error" id="load-error" role="alert" hidden></p>
+</main>
+<noscript><p class="noscript-note">This Pokédex needs JavaScript for animation and its interactive records. The <a href="../README.md">kit guide</a> and <a href="../downloads/Vitrake-Pokedex-A4.pdf">printable Pokédex</a> are available separately.</p></noscript>
+</body>
+</html>

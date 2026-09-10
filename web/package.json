@@ -1,0 +1,12 @@
+{
+  "name": "vitrake-pokedex",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable static Pokédex gift archive",
+  "scripts": {
+    "lint": "node scripts/check.mjs",
+    "build": "node scripts/check.mjs --build",
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory .."
+  }
+}
