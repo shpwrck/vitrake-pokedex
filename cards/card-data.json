@@ -1,0 +1,75 @@
+{
+  "name": "Vitrake ex",
+  "hp": 220,
+  "type": "Dragon",
+  "stage": "Basic",
+  "attacks": [
+    {
+      "name": "Acid Spray",
+      "cost": [
+        "Colorless"
+      ],
+      "damage": 30,
+      "text": "Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon."
+    },
+    {
+      "name": "Dragon Pulse",
+      "cost": [
+        "Fire",
+        "Water",
+        "Colorless"
+      ],
+      "damage": 180,
+      "text": "Discard the top 2 cards of your deck."
+    }
+  ],
+  "weakness": null,
+  "resistance": null,
+  "retreatCost": 2,
+  "rule": "When your Pokémon ex is Knocked Out, your opponent takes 2 Prize cards.",
+  "flavorText": "Two quiet horns. One unmistakable warning.",
+  "fanMade": true,
+  "prizes": 2,
+  "ability": null,
+  "number": "001/001",
+  "set": "JWS",
+  "edition": "FAN GIFT EDITION",
+  "widthMm": 63,
+  "heightMm": 88,
+  "regulationMark": null,
+  "system": "Physical Pokémon TCG; custom fan card, not tournament legal or Pokémon TCG Pocket.",
+  "designNotes": [
+    "Dragon is the Pokémon type. There is no Basic Dragon Energy; Fire and Water costs echo the two reservoirs.",
+    "Colorless costs can be paid by any Energy type. Attacking does not normally discard attached Energy.",
+    "Modern Dragon cards commonly have no Weakness or Resistance. They do not inherit the video-game type chart.",
+    "This is an ordinary Pokémon ex, not a Mega Evolution. The premium full-art/foil treatment is cosmetic.",
+    "Attack values and assignment are fan design. No playtesting claim; conservative comparator-based starting point."
+  ],
+  "sources": [
+    {
+      "title": "Raging Bolt ex, Prismatic Evolutions 166",
+      "url": "https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv8pt5/166",
+      "supports": "Modern Dragon Basic ex, 240 HP, no Weakness or Resistance, two-Prize rule and special illustration treatment."
+    },
+    {
+      "title": "Dragonite, Scarlet & Violet 151",
+      "url": "https://asia.pokemon-card.com/hk-en/card-search/detail/10198/",
+      "supports": "Dragon Pulse at 180 damage with two-card self-mill; no Weakness or Resistance."
+    },
+    {
+      "title": "Flapple, Astral Radiance Trainer Gallery",
+      "url": "https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/swsh10tg/TG02",
+      "supports": "Acid Spray coin-flip Energy-discard effect."
+    },
+    {
+      "title": "Noble Victories Card-Dex",
+      "url": "https://assets.pokemon.com/assets/cms/pdf/tcg/carddex/bw_noble_victories.pdf",
+      "supports": "Accelgor has a one-Colorless Acid Spray attack for 20 damage."
+    },
+    {
+      "title": "Pokémon TCG rulebook",
+      "url": "https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/rulebook/par_rulebook_en.pdf",
+      "supports": "Physical-game costs, Basic Pokémon, attacking and Prize rules."
+    }
+  ]
+}

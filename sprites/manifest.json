@@ -1,0 +1,210 @@
+{
+  "species": "Vitrake",
+  "design": "bombardier-horn-vials",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "columns": 8,
+  "rows": 5,
+  "frameCount": 40,
+  "frameDurationMs": 50,
+  "cycleDurationMs": 2000,
+  "pixelRatio": [
+    1,
+    1
+  ],
+  "paletteEntries": 16,
+  "sheets": {
+    "regular-front": "regular-front-sheet.png",
+    "regular-back": "regular-back-sheet.png",
+    "shiny-front": "shiny-front-sheet.png",
+    "shiny-back": "shiny-back-sheet.png"
+  },
+  "animations": {
+    "idle": {
+      "sheets": {
+        "regular-front": "regular-front-sheet.png",
+        "regular-back": "regular-back-sheet.png",
+        "shiny-front": "shiny-front-sheet.png",
+        "shiny-back": "shiny-back-sheet.png"
+      },
+      "loop": true
+    },
+    "attack": {
+      "sheets": {
+        "regular-front": "regular-front-attack-sheet.png",
+        "shiny-front": "shiny-front-attack-sheet.png"
+      },
+      "loop": false,
+      "name": "brace-and-spray"
+    }
+  },
+  "assets": {
+    "regular-front": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 22,
+      "bounds": [
+        6,
+        2,
+        62,
+        62
+      ],
+      "png": "regular-front.png",
+      "aseprite": "regular-front.aseprite",
+      "gif": "regular-front.gif",
+      "sheet": "regular-front-sheet.png",
+      "sheetData": "regular-front-sheet.json",
+      "enlargedPng": "regular-front-6x.png",
+      "enlargedGif": "regular-front-6x.gif"
+    },
+    "regular-back": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 16,
+      "bounds": [
+        6,
+        2,
+        59,
+        62
+      ],
+      "png": "regular-back.png",
+      "aseprite": "regular-back.aseprite",
+      "gif": "regular-back.gif",
+      "sheet": "regular-back-sheet.png",
+      "sheetData": "regular-back-sheet.json",
+      "enlargedPng": "regular-back-6x.png",
+      "enlargedGif": "regular-back-6x.gif"
+    },
+    "shiny-front": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 22,
+      "bounds": [
+        6,
+        2,
+        62,
+        62
+      ],
+      "png": "shiny-front.png",
+      "aseprite": "shiny-front.aseprite",
+      "gif": "shiny-front.gif",
+      "sheet": "shiny-front-sheet.png",
+      "sheetData": "shiny-front-sheet.json",
+      "enlargedPng": "shiny-front-6x.png",
+      "enlargedGif": "shiny-front-6x.gif"
+    },
+    "shiny-back": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 16,
+      "bounds": [
+        6,
+        2,
+        59,
+        62
+      ],
+      "png": "shiny-back.png",
+      "aseprite": "shiny-back.aseprite",
+      "gif": "shiny-back.gif",
+      "sheet": "shiny-back-sheet.png",
+      "sheetData": "shiny-back-sheet.json",
+      "enlargedPng": "shiny-back-6x.png",
+      "enlargedGif": "shiny-back-6x.gif"
+    },
+    "regular-front-attack": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 23,
+      "bounds": [
+        1,
+        3,
+        63,
+        62
+      ],
+      "png": "regular-front-attack.png",
+      "aseprite": "regular-front-attack.aseprite",
+      "gif": "regular-front-attack.gif",
+      "sheet": "regular-front-attack-sheet.png",
+      "sheetData": "regular-front-attack-sheet.json",
+      "enlargedPng": "regular-front-attack-6x.png",
+      "enlargedGif": "regular-front-attack-6x.gif"
+    },
+    "shiny-front-attack": {
+      "nativeDimensions": [
+        64,
+        64
+      ],
+      "sheetDimensions": [
+        512,
+        320
+      ],
+      "frames": 40,
+      "durationMs": 2000,
+      "uniqueFrames": 39,
+      "layers": 23,
+      "bounds": [
+        1,
+        3,
+        63,
+        62
+      ],
+      "png": "shiny-front-attack.png",
+      "aseprite": "shiny-front-attack.aseprite",
+      "gif": "shiny-front-attack.gif",
+      "sheet": "shiny-front-attack-sheet.png",
+      "sheetData": "shiny-front-attack-sheet.json",
+      "enlargedPng": "shiny-front-attack-6x.png",
+      "enlargedGif": "shiny-front-attack-6x.gif"
+    }
+  },
+  "anatomicalSides": {
+    "left": "blue",
+    "right": "amber"
+  },
+  "motion": "Rigid shell supported by six planted feet; jaw and antenna hinges; small bubbles inside horn vials."
+}

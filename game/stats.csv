@@ -1,0 +1,7 @@
+stat,base,level50_min,level50_max,sample_level50
+hp,80,140,187,187
+attack,65,63,128,63
+defense,105,99,172,125
+specialAttack,110,103,178,178
+specialDefense,85,81,150,106
+speed,75,72,139,95
