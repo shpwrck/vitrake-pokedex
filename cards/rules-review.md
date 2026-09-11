@@ -1,37 +1,43 @@
-# Vitrake ex — independent TCG rules review
+# Vitrake ex — current physical TCG audit
 
-Reviewed 10 September 2026 against `card-data.json`. **Pass: no mechanical correction required.** This is a review of a fan card for the physical Pokémon TCG, not Pokémon TCG Pocket, official legality, or deck playtesting.
+Reviewed **11 September 2026** on `fix/card-tcg-audit`. **Pass for rules coherence and conventional wording; no gameplay values need changing.** The old rendered-symbol issue has been corrected separately. This is an original fan card: authentic rules and symbols do not make its species, combined statistics, or release metadata official. It is not tournament legal.
 
-## Card identity and rules
+## Current rules checked
 
-**Basic Dragon Pokémon ex, 220 HP, two Prizes:** coherent with the single-stage species. The lowercase **ex** naming and two-Prize rule use the modern card family. [Raging Bolt ex](https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv8pt5/166) provides an official Dragon Basic ex comparator at 240 HP, with no Weakness or Resistance. The [official Asia listing](https://asia.pokemon-card.com/sg/card-search/detail/14173/) independently identifies its Basic stage.
+The live [official Rules & Resources page](https://www.pokemon.com/us/play-pokemon/about/tournaments-rules-and-resources) links the [Pitch Black rulebook](https://www.pokemon.com/static-assets/content-assets/cms2/pdf/trading-card-game/rulebook/pbl_rulebook_en.pdf), whose cover says **last updated July 2026**, and the [TCG Tournament Handbook](https://www.pokemon.com/static-assets/content-assets/cms2/pdf/play-pokemon/rules/play-pokemon-tcg-tournament-handbook-en.pdf), whose cover says **September 1, 2026**. Both documents were opened and visually read in the browser. The former 2023 rulebook citation has been replaced.
 
-**No Weakness or Resistance:** suitable for a modern Dragon card. It should not receive the video game's five weaknesses. Blank Weakness and Resistance entries also appear on [Dragonite from Scarlet & Violet—151](https://asia.pokemon-card.com/hk-en/card-search/detail/10198/). This is a supported design convention, not a universal law applying to every historical Dragon card.
+Relevant rulebook pages: **4** (Dragon type commonly uses multiple Energy types), **12** (retreat), **13–14** (attack costs, resolution, and the attacking Pokémon's type), and **26** (ordinary Pokémon ex and two Prizes). Those rules support the card's costs and ex structure. The separately checked [Pitch Black announcement](https://www.pokemon.com/us/play-pokemon/about/mega-evolution/mega-evolution-pitch-black-rule-changes-announcement), effective July 31, reports no ban-list changes; it does not require alterations to these attacks.
 
-**Fire + Water + Colorless:** a valid attack requirement for a Dragon Pokémon. Dragon type does not require a Basic Dragon Energy card. A Colorless requirement accepts any Energy type; the two colored requirements must also be fulfilled. Neither attack instructs the player to discard Vitrake's attached Energy, so that Energy ordinarily stays attached. Retreat 2 uses two Colorless symbols. These follow the [physical TCG rulebook](https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/rulebook/par_rulebook_en.pdf), especially printed pages 6, 12–14 and 23.
+## Field-by-field findings
 
-The Fire and Water costs do not change attack type. Both attacks come from this **Dragon-type Pokémon**; the video-game Poison type of Acid Spray and the video-game Mega Launcher ability do not transfer to this card. The `ability: null` choice keeps that separation clear.
+| Field | Finding |
+|---|---|
+| **Vitrake ex; Basic** | Original name with the conventional lowercase **ex** suffix. Basic appropriately represents the single-stage species; no evolution prerequisite is missing. |
+| **Dragon; 220 HP** | Plausible fan assignments. [Raging Bolt ex](https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv8pt5/166) is an official 240-HP Dragon Basic ex. Its [official Asia listing](https://asia.pokemon-card.com/ph/card-search/detail/12338/) confirms Basic status. This comparator supports a range, not an official Vitrake statistic. |
+| **No Weakness / Resistance** | Consistent with modern Dragon examples, including Raging Bolt ex and [Dragonite 151](https://asia.pokemon-card.com/hk-en/card-search/detail/10198/). A blank or dash means none. Do not import the game's Bug/Dragon weaknesses. This is a design convention, not a rule for every historical Dragon card. |
+| **Retreat: two Colorless** | Standard notation for a retreat cost of 2 Energy. The exact value 2 is custom tuning. |
+| **No Ability** | Valid. No ability is compulsory, and game abilities such as Mega Launcher do not transfer automatically. |
+| **Two-Prize ex rule** | The existing wording matches the ordinary modern ex rule. Keep the readable rule box; this is not a Mega Evolution ex and must not receive a three-Prize rule. |
+| **63 × 88 mm; full art / foil appearance** | Conventional trading-card print proportions and a decorative fan treatment. Neither foil appearance nor full art changes gameplay. |
+| **JWS; 001/001; FAN GIFT EDITION; For Jeremy** | Custom gift metadata, clearly separate from official set codes and collector identities. No invented regulation mark, official rarity classification, or official illustrator attribution is needed. |
+| **Companion flavorText** | Editorial copy only. It is not an effect and is absent from the rendered ex face. |
 
-## Attacks
+## Attack wording and precedents
 
-| Attack | Proposed mechanics | Review |
-|---|---|---|
-| Acid Spray | One Colorless; 30 damage; coin flip can discard an Energy from the opposing Active Pokémon. | Effect wording matches the modern [Flapple Trainer Gallery card](https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/swsh10tg/TG02). [Accelgor in the official Noble Victories Card-Dex, printed page 5](https://assets.pokemon.com/assets/cms/pdf/tcg/carddex/bw_noble_victories.pdf) establishes the same one-Colorless concept at 20 damage. Raising that to 30 on a two-Prize Basic ex is a plausible fan adjustment. |
-| Dragon Pulse | Fire, Water, Colorless; 180 damage; discard the top two cards of the user's deck. | The 180-damage/two-card discard pairing and exact effect wording appear on [Dragonite](https://asia.pokemon-card.com/hk-en/card-search/detail/10198/). The extra Energy requirement, two-Prize liability, and lack of an Ability keep this from being an obvious numerical outlier. |
+**Acid Spray — one Colorless, 30 damage.** The effect is exactly the current-style wording used by [Flapple TG02](https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/swsh10tg/TG02), apart from a typographic apostrophe. [Accelgor, Noble Victories Card-Dex, p.5](https://assets.pokemon.com/assets/cms/pdf/tcg/carddex/bw_noble_victories.pdf) supplies a historical one-Colorless precedent at **20** damage. Vitrake's **30** is a deliberate fan adjustment, not a copied official damage/cost combination. The coin flip determines Energy removal; the printed 30 damage does not depend on heads. “An Energy” must remain broad; narrowing it to Basic Energy would change the effect.
 
-The Acid Spray coin determines only Energy removal; damage is not conditional on heads. Dragon Pulse's deck discard is its printed attack effect, not an invented requirement to detach Energy before attacking. The exact proposed text is already conventional; avoid adding explanatory clauses to the small card text.
+**Dragon Pulse — Fire, Water, Colorless; 180 damage.** [Dragonite 151](https://asia.pokemon-card.com/hk-en/card-search/detail/10198/) has the same **180 damage plus discarding the top 2 cards of the user's deck**, with exactly the same effect sentence. Dragonite's attack uses two Energy; Vitrake's mixed three-Energy cost is custom. The name and effect are real TCG material. The whole Vitrake attack is not an exact reprint.
 
-## Balance judgment
+The card's Energy costs do not assign separate types to its attacks. Both use this Pokémon's **Dragon** type when applying Weakness and Resistance. Thus Acid Spray does not become a Poison-type TCG attack, and Fire Energy does not make Dragon Pulse a Fire-type attack. The game's restricted Bug/Normal/Dragon learnset remains a separate system. There is no Basic Dragon Energy requirement to add. Attacking does not normally consume the attached Energy; Dragon Pulse discards from the **deck**, not from the attacker.
 
-The card has a clear choice: inexpensive disruption or a heavier attack that needs two Energy types. A fixed 180 damage does not knock out a fresh 220-HP peer without another modifier or prior damage. Self-discard can help some decks rather than being purely a drawback, so it should not be described as a strong balancing cost on its own. The 220 HP, two-Prize risk, mixed Energy requirements and absence of an Ability are the more meaningful limits.
+The proposed values are a reasonable gift-card starting point: a cheap disruption option, 180 fixed damage, two Energy colors, two-Prize liability, and no Ability. Deck self-discard can help some strategies, so it is not a strong guaranteed drawback. No competitive balance, metagame strength, or playtesting result is claimed. The evidence gives no reason to redesign the costs, lower the HP, add weaknesses, or invent another effect.
 
-This supports **reasonable starting values for a gift card**. It does not demonstrate a particular tournament power level. There is no need to add weakness, invent Dragon Energy, lower Acid Spray, or add an Energy-discard penalty solely to make the rules coherent.
+Historical Flapple, Accelgor, and Dragonite examples establish mechanics; they are not all current Standard-legal cards. The September handbook's §2/p.4 requires genuine cards, with limited judge/organizer-issued proxy exceptions. Its §4.1.1/p.9 lists the current H/I/J context. A fictional species cannot become legal by printing one of those marks. Retain `regulationMark: null` and the fan designation.
 
-## Presentation and source notes
+## Rendered symbols and prior validation error
 
-- Keep **FAN GIFT EDITION** legible on the printed face. `fanMade: true`, the custom JWS set identifier, no regulation mark, and the explicit non-tournament note already separate it from an official release.
-- Foiling and full art can stay decorative. It is an ordinary Pokémon ex, so do not add a Mega label or Mega rules.
-- Optional layout refinement: use `flavorText` as companion/app copy if space is tight. A modern ex layout needs a readable ex rule box; its tagline should not crowd that box or mimic a regular card's Pokédex-flavor footer.
-- The JSON accurately says attack assignment and numeric tuning are fan design, while identifying the official precedents. The rulebook is a 2023 Scarlet/Violet-era publication; its reviewed ordinary ex, attack and Energy rules are the relevant parts. The review does not rely on its older Mega-EX appendix for current Mega cards.
+The old `valid_energy_symbols` pass checked **cost type names in JSON**, not the geometry actually drawn. `tools/build-print.py` previously hand-drew Dragon, Fire, Water, and Colorless icons. That was a real visual defect and an overstated validation label.
 
-No edit to `card-data.json` was made. `validation.json` records the reviewed file's hash so later mechanical changes can be recognized.
+The renderer now places the unchanged official PNGs documented in [the official Druddigon page](https://asia.pokemon-card.com/sg/card-search/detail/2096/): [Dragon](https://asia.pokemon-card.com/various_images/energy/Dragon.png), [Fire](https://asia.pokemon-card.com/various_images/energy/Fire.png), [Water](https://asia.pokemon-card.com/various_images/energy/Water.png), and [Colorless](https://asia.pokemon-card.com/various_images/energy/Colorless.png). `assets/tcg-symbols/sources.json` records URLs and SHA-256 values. This audit independently checked those local hashes, the renderer's asset placement, and the rebuilt card face: correct Dragon header, one Colorless for Acid Spray, Fire/Water/Colorless for Dragon Pulse, and two Colorless for retreat. Typography is legible and no effect or rule text is missing.
+
+`cards/validation.json` now separates data checks, asset provenance, and visual inspection. No gameplay fields were changed by this audit; only source and design-note metadata were revised. Release checks separately verify the downloadable PDFs and archive contents.

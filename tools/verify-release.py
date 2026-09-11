@@ -37,6 +37,8 @@ SPRITES = (
 ASSETS = (
     "assets/portrait.png", "assets/rear-reference.png", "assets/habitat-artwork.png",
     "assets/card-artwork.png", "assets/card-front.png", "assets/pokemon-card-back.jpg",
+    "assets/tcg-symbols/dragon.png", "assets/tcg-symbols/fire.png",
+    "assets/tcg-symbols/water.png", "assets/tcg-symbols/colorless.png",
     "assets/cry.wav", "assets/cry.mp3", "assets/cry.vtt",
 )
 STAT_KEYS = ("hp", "attack", "defense", "specialAttack", "specialDefense", "speed")
@@ -143,18 +145,31 @@ def validate_card(root: Path) -> dict:
     card = load_json(root / "cards/card-data.json")
     require(card["name"] == "Vitrake ex" and card["stage"] == "Basic", "Card must be Basic Vitrake ex")
     require(card["type"] == "Dragon" and card["hp"] == 220, "Card type/HP changed")
-    require(card["prizes"] == 2 and "2 Prize cards" in card["rule"], "Pokémon ex two-Prize rule missing")
+    require(card["prizes"] == 2 and card["rule"] == "When your Pokémon ex is Knocked Out, your opponent takes 2 Prize cards.", "Pokémon ex two-Prize rule missing")
     require(card["weakness"] is None and card["resistance"] is None, "Modern Dragon card must use designed blank Weakness/Resistance")
     require(card["retreatCost"] == 2, "Retreat cost must be two Colorless")
     require(card["ability"] is None and card["fanMade"] is True, "Card identity/ability changed")
+    require(card["regulationMark"] is None, "Fan card must not claim an official regulation mark")
     attacks = card["attacks"]
     require(len(attacks) == 2, "Card must have exactly two attacks")
     require(attacks[0]["name"] == "Acid Spray" and attacks[0]["damage"] == 30 and attacks[0]["cost"] == ["Colorless"], "Acid Spray cost/damage invariant failed")
     require(attacks[1]["name"] == "Dragon Pulse" and attacks[1]["damage"] == 180 and attacks[1]["cost"] == ["Fire", "Water", "Colorless"], "Dragon Pulse cost/damage invariant failed")
-    require("Flip a coin" in attacks[0]["text"] and "discard an Energy" in attacks[0]["text"], "Acid Spray effect missing")
+    require(attacks[0]["text"] == "Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon.", "Acid Spray effect wording changed")
     require(attacks[1]["text"] == "Discard the top 2 cards of your deck.", "Dragon Pulse self-mill effect changed")
     require(not any("Dragon" in attack["cost"] for attack in attacks), "Basic Dragon Energy is not an attack cost")
-    return {"type": "Dragon", "hp": 220, "prizes": 2, "attacks": 2, "retreatCost": 2}
+    symbol_dir = root / "assets/tcg-symbols"
+    symbols = load_json(symbol_dir / "sources.json")["symbols"]
+    names = {"dragon", "fire", "water", "colorless"}
+    require(len(symbols) == len(names) and {item["name"] for item in symbols} == names, "Four official TCG symbols required")
+    for item in symbols:
+        name = item["name"]
+        require(item["file"] == f"{name}.png", "Unexpected symbol filename")
+        require(item["sourceUrl"] == f"https://asia.pokemon-card.com/various_images/energy/{name.title()}.png", "Symbol must have its official source URL")
+        path = symbol_dir / item["file"]
+        require(png_size(path) == (item["width"], item["height"]), f"Symbol dimensions changed: {name}")
+        with path.open("rb") as handle:
+            require(digest(handle) == item["sha256"], f"Official symbol file changed: {name}")
+    return {"type": "Dragon", "hp": 220, "prizes": 2, "attacks": 2, "retreatCost": 2, "officialSymbolFilesVerified": len(symbols), "tournamentLegal": False}
 
 
 def validate_sprites(root: Path) -> dict:

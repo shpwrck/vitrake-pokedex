@@ -39,11 +39,17 @@
   "regulationMark": null,
   "system": "Physical Pokémon TCG; custom fan card, not tournament legal or Pokémon TCG Pocket.",
   "designNotes": [
-    "Dragon is the Pokémon type. There is no Basic Dragon Energy; Fire and Water costs echo the two reservoirs.",
-    "Colorless costs can be paid by any Energy type. Attacking does not normally discard attached Energy.",
-    "Modern Dragon cards commonly have no Weakness or Resistance. They do not inherit the video-game type chart.",
-    "This is an ordinary Pokémon ex, not a Mega Evolution. The premium full-art/foil treatment is cosmetic.",
-    "Attack values and assignment are fan design. No playtesting claim; conservative comparator-based starting point."
+    "Dragon is the Pokémon type. There is no Basic Dragon Energy; Fire and Water costs echo the two reservoirs. Both attacks use the attacking Pokémon's Dragon type for Weakness and Resistance.",
+    "Colorless costs can be paid by any Energy type. Attacking does not normally discard attached Energy; retreating requires discarding Energy to pay the Retreat Cost.",
+    "Modern Dragon cards commonly have no Weakness or Resistance. This is a supported card-design convention, not the video-game type chart or a rule for every historical Dragon card.",
+    "This is an ordinary Pokémon ex, not a Mega Evolution. It gives up 2 Prize cards when Knocked Out; the full-art/foil treatment is cosmetic.",
+    "Acid Spray uses an existing TCG name and exact current-style effect wording. Its one-Colorless cost has precedent at 20 damage; Vitrake's 30 damage is custom tuning.",
+    "Dragon Pulse uses Dragonite 151's existing 180-damage and two-card self-discard combination. Fire + Water + Colorless is Vitrake's custom cost, not a verbatim copy of that Dragonite attack.",
+    "Vitrake, its HP and combined card values, JWS set identifier, collector number and gift edition are original fan design. They are not an official release or a tournament-legal card. No regulation mark is assigned.",
+    "Rules reviewed 2026-09-11 using the July 2026 Pitch Black rulebook and September 1, 2026 TCG Tournament Handbook, reached from the live official Rules & Resources page.",
+    "No competitive playtesting claim. Fixed damage and mixed Energy costs are a reasonable gift-card starting point; discarding from the deck can sometimes help a strategy.",
+    "flavorText is optional companion copy, not an extra card effect or text printed on this modern ex card face.",
+    "Dragon, Fire, Water and Colorless symbols are unchanged official website PNG assets. Their source URLs and checksums are recorded in assets/tcg-symbols/sources.json; this does not make the fan card official."
   ],
   "sources": [
     {
@@ -67,9 +73,29 @@
       "supports": "Accelgor has a one-Colorless Acid Spray attack for 20 damage."
     },
     {
-      "title": "Pokémon TCG rulebook",
-      "url": "https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/rulebook/par_rulebook_en.pdf",
-      "supports": "Physical-game costs, Basic Pokémon, attacking and Prize rules."
+      "title": "Pokémon TCG Rulebook — Mega Evolution: Pitch Black (July 2026)",
+      "url": "https://www.pokemon.com/static-assets/content-assets/cms2/pdf/trading-card-game/rulebook/pbl_rulebook_en.pdf",
+      "supports": "Current linked physical-game rulebook; Energy types p.4, retreat p.12, attack costs and resolution pp.13–14, ordinary Pokémon ex p.26. Visually read in the browser on 2026-09-11."
+    },
+    {
+      "title": "Play! Pokémon TCG Tournament Handbook (September 1, 2026)",
+      "url": "https://www.pokemon.com/static-assets/content-assets/cms2/pdf/play-pokemon/rules/play-pokemon-tcg-tournament-handbook-en.pdf",
+      "supports": "Current card eligibility: genuine cards and limited judge-issued proxies (§2, p.4); H/I/J regulation context (§4.1.1, p.9). Vitrake is a custom fan card, not eligible for official tournaments."
+    },
+    {
+      "title": "Play! Pokémon Rules & Resources",
+      "url": "https://www.pokemon.com/us/play-pokemon/about/tournaments-rules-and-resources",
+      "supports": "Live page inspected 2026-09-11 links the July 2026 Pitch Black rulebook and current TCG Tournament Handbook."
+    },
+    {
+      "title": "Mega Evolution—Pitch Black Rule Changes Announcement",
+      "url": "https://www.pokemon.com/us/play-pokemon/about/mega-evolution/mega-evolution-pitch-black-rule-changes-announcement",
+      "supports": "July 2, 2026 announcement, effective July 31, reports no Standard or Expanded ban-list changes."
+    },
+    {
+      "title": "Druddigon, Brilliant Stars — official symbol reference",
+      "url": "https://asia.pokemon-card.com/sg/card-search/detail/2096/",
+      "supports": "Official card page supplies the Dragon type and Fire/Water/Colorless cost icon assets used by the rendering; file provenance is in assets/tcg-symbols/sources.json."
     }
   ]
 }
