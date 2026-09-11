@@ -51,7 +51,7 @@
       "frames": 40,
       "durationMs": 2000,
       "uniqueFrames": 39,
-      "layers": 22,
+      "layers": 23,
       "bounds": [
         6,
         2,
@@ -105,7 +105,7 @@
       "frames": 40,
       "durationMs": 2000,
       "uniqueFrames": 39,
-      "layers": 22,
+      "layers": 23,
       "bounds": [
         6,
         2,
@@ -159,9 +159,9 @@
       "frames": 40,
       "durationMs": 2000,
       "uniqueFrames": 39,
-      "layers": 23,
+      "layers": 24,
       "bounds": [
-        1,
+        2,
         3,
         63,
         62
@@ -186,9 +186,9 @@
       "frames": 40,
       "durationMs": 2000,
       "uniqueFrames": 39,
-      "layers": 23,
+      "layers": 24,
       "bounds": [
-        1,
+        2,
         3,
         63,
         62

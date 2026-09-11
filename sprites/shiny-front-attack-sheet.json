@@ -383,7 +383,6 @@
    { "name": "mixing-mouth", "opacity": 255, "blendMode": "normal" },
    { "name": "dragon-upper", "opacity": 255, "blendMode": "normal" },
    { "name": "horn-left-blue", "opacity": 255, "blendMode": "normal" },
-   { "name": "jaw", "opacity": 255, "blendMode": "normal" },
    { "name": "near-front_upper", "opacity": 255, "blendMode": "normal" },
    { "name": "near-front_lower", "opacity": 255, "blendMode": "normal" },
    { "name": "near-middle_upper", "opacity": 255, "blendMode": "normal" },
@@ -393,6 +392,8 @@
    { "name": "beetle-head", "opacity": 255, "blendMode": "normal" },
    { "name": "antenna-far", "opacity": 255, "blendMode": "normal" },
    { "name": "antenna-near", "opacity": 255, "blendMode": "normal" },
+   { "name": "mouth-floor", "opacity": 255, "blendMode": "normal" },
+   { "name": "jaw", "opacity": 255, "blendMode": "normal" },
    { "name": "chemical-spray", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [

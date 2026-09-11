@@ -6,7 +6,7 @@ An original Bug/Dragon Pokémon gift for Jeremy, inspired by the bombardier beet
 Two transparent horns feed a chemical blast through its dragon-faced shell.
 
 The gift includes a Pokédex webapp, artwork, an original cry, a 520-point stat profile,
-31 existing moves, regular and shiny sprites, editable Aseprite animations, a full-art
+a focused Bug, Normal and Dragon move list, regular and shiny sprites, editable Aseprite animations, a full-art
 Vitrake ex card, and printable Pokédex guides, card sheets and artwork.
 
 ## Downloads and printing

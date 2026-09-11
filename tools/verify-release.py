@@ -125,13 +125,18 @@ def validate_species(root: Path) -> dict:
     require(all(isinstance(value, int) and 1 <= value <= 255 for value in values), "Base stat outside normal game field range")
     require(sum(values) == species["baseStatTotal"] == 520, "Base stat total must be 520")
     moves = species["moves"]
-    require(len(moves) == 42, "Learnset must contain 42 acquisition rows")
-    require(len({move["name"] for move in moves}) == 31, "Learnset must contain 31 unique moves")
+    require(bool(moves), "Learnset must not be empty")
+    require(all(move["type"] in {"Bug", "Normal", "Dragon"} for move in moves), "Learnset must use only Bug, Normal and Dragon moves")
+    names = {move["name"] for move in moves}
+    assignments = {(move["name"], move["method"], move.get("level")) for move in moves}
+    require(len(assignments) == len(moves), "Duplicate move acquisition row")
+    battle_moves = species["battleSet"]["moves"]
+    require(len(battle_moves) == len(set(battle_moves)) == 4 and set(battle_moves) <= names, "Suggested battle set must use four distinct learned moves")
     require(set(species["typeMatchups"]) == TYPE_NAMES, "All eighteen ordinary type matchups are required")
     require(species["typeMatchups"]["Grass"] == 0.25 and species["typeMatchups"]["Fire"] == 1, "Bug/Dragon type cancellation is incorrect")
     require(all(move["method"] in ("Level up", "TM") for move in moves), "Unknown learnset method")
     require(all(move["category"] in ("Physical", "Special", "Status") for move in moves), "Unknown move category")
-    return {"baseStatTotal": sum(values), "uniqueMoves": 31, "learnsetRows": 42, "typeMatchups": 18}
+    return {"baseStatTotal": sum(values), "uniqueMoves": len(names), "learnsetRows": len(moves), "learnsetTypes": sorted({move["type"] for move in moves}), "typeMatchups": 18}
 
 
 def validate_card(root: Path) -> dict:
