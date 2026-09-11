@@ -1,0 +1,69 @@
+{
+  "title": "Official physical Pokémon TCG symbols for Vitrake fan card",
+  "retrieved": "2026-09-11",
+  "publisher": "The Pokémon Company / official Pokémon Trading Card Game Trainers Website",
+  "evidencePage": "https://asia.pokemon-card.com/sg/card-search/detail/2096/",
+  "evidenceCardImageSource": "https://asia.pokemon-card.com/sg/card-img/default00002096.png",
+  "evidenceCard": "Druddigon — Brilliant Stars — 120 HP — Dragon type",
+  "symbols": [
+    {
+      "name": "dragon",
+      "file": "dragon.png",
+      "sourceUrl": "https://asia.pokemon-card.com/various_images/energy/Dragon.png",
+      "width": 577,
+      "height": 577,
+      "mode": "RGBA",
+      "byteCount": 225723,
+      "sha256": "d702bfb4b2030a9d98d668b3ef9da01411af948f5c2c08f8a3e042f5159210b5",
+      "transformations": [],
+      "containsBackgroundDisc": true,
+      "evidenceUse": "Pokémon type icon"
+    },
+    {
+      "name": "fire",
+      "file": "fire.png",
+      "sourceUrl": "https://asia.pokemon-card.com/various_images/energy/Fire.png",
+      "width": 582,
+      "height": 581,
+      "mode": "RGBA",
+      "byteCount": 171621,
+      "sha256": "c6a6d3f0ffa47d3b009e4a43f9fb58713f2748b1a944ad1936055b084b08f65f",
+      "transformations": [],
+      "containsBackgroundDisc": true,
+      "evidenceUse": "Revenge and Dragon Claw attack cost"
+    },
+    {
+      "name": "water",
+      "file": "water.png",
+      "sourceUrl": "https://asia.pokemon-card.com/various_images/energy/Water.png",
+      "width": 582,
+      "height": 581,
+      "mode": "RGBA",
+      "byteCount": 161226,
+      "sha256": "fce4480715a56ba0d0528f2821309ce22fa60a8b5f872e8816f53a09994fd731",
+      "transformations": [],
+      "containsBackgroundDisc": true,
+      "evidenceUse": "Revenge and Dragon Claw attack cost"
+    },
+    {
+      "name": "colorless",
+      "file": "colorless.png",
+      "sourceUrl": "https://asia.pokemon-card.com/various_images/energy/Colorless.png",
+      "width": 582,
+      "height": 581,
+      "mode": "RGBA",
+      "byteCount": 138120,
+      "sha256": "4569b2b462f01a3752dfd85199538573028bb211668d4ac4b2dc260fac038014",
+      "transformations": [],
+      "containsBackgroundDisc": true,
+      "evidenceUse": "Dragon Claw attack cost and retreat cost"
+    }
+  ],
+  "useNotes": [
+    "All four PNG assets are byte-for-byte downloads from the official Pokémon TCG website; no redrawing, recoloring, upscaling, alpha stripping, or cropping.",
+    "Each includes its original shaded circular disc and transparent exterior. Render preserving aspect ratio and alpha.",
+    "Native raster sizes exceed 128 pixels and are ample for printed attack cost/header use at typical card sizes.",
+    "Dragon denotes the Pokémon type. Fire and Water denote attack energy costs. Colorless denotes a cost that any Energy type may satisfy.",
+    "These are official third-party Pokémon assets, not original fan artwork or a claim of open licensing."
+  ]
+}

@@ -50,7 +50,8 @@ The public repository contains only the distributable app, gift files and deploy
 ## Credits
 
 Vitrake is a personal fan gift, not an official Pokémon or tournament-legal card.
-Pokémon terminology and the standard card-back artwork belong to their respective owners.
+Pokémon terminology, the standard card-back artwork and official TCG symbols belong to their respective owners.
+Symbol source URLs and checksums are recorded in assets/tcg-symbols/sources.json.
 This project is not affiliated with Nintendo, Game Freak, Creatures or The Pokémon Company.
 Illustrations were generated for this project. Sprites were built and animated with Aseprite.
 The original cry uses synthesis without sampled Pokémon audio.
